@@ -18,10 +18,11 @@ class Program
             Console.Write("Choose a mindfulness activity: ");
 
             int option = int.Parse(Console.ReadLine());
+            int time = 0;
             if (option != 0)
             {
                 Activity activity = new Activity();
-                int time = int.Parse(Console.ReadLine());
+                time = int.Parse(Console.ReadLine());
             }
 
             if (option == 1)
