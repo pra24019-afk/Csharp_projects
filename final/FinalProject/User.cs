@@ -8,4 +8,8 @@ public class User
     {
         _name = name;
     }
+    public void AddScore(int score)
+    {
+        _totalScore += score;
+    }
 }
