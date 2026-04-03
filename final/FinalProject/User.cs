@@ -7,9 +7,14 @@ public class User
     public User(string name)
     {
         _name = name;
+        _totalScore = 0;
     }
     public void AddScore(int score)
     {
         _totalScore += score;
+    }
+    public int DisplayTotalScore()
+    {
+        return _totalScore;
     }
 }
