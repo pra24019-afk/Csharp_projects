@@ -14,7 +14,7 @@ class Program
         while (running)
         {
             Console.WriteLine("Menu");
-            Console.WriteLine("1. Write New Entry (10 without optional entry topic)");
+            Console.WriteLine("1. Write New Entry (10. Write new entry without optional entry topic)");
             Console.WriteLine("2. Display Journal");
             Console.WriteLine("3. Save Journal");
             Console.WriteLine("4. Load Journal");
@@ -61,7 +61,7 @@ class Program
 
                 Entry entry = new Entry(_dateOfEntry, _entryDetails, _name);
                 myJournal._entries.Add(entry);
-                
+
             }else if (_menuChoice == 2)
             {
                 myJournal.DisplayJournal();
