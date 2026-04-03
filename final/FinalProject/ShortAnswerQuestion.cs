@@ -7,4 +7,8 @@ public class ShortAnswerQuestion: Question
     {
         _answer = answer;
     }
+    public override bool CheckAnswer(string userAnswer)
+    {
+        return userAnswer.ToLower() == _answer.ToLower();
+    }
 }
