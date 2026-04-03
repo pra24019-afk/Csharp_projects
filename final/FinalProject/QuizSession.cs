@@ -9,7 +9,7 @@ public class QuizSession
         _deck = deck;
         _score = 0;
     }
-    public void Start()
+    public int Start()
     {
         foreach (Question q in _deck.GetQuestions())
         {
@@ -30,5 +30,6 @@ public class QuizSession
         }
         Console.WriteLine($"Score: {_score}");
         Console.WriteLine();
+        return _score;
     }
 }
