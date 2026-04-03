@@ -11,4 +11,9 @@ public class TrueFalseQuestion: Question
     {
         return userAnswer.ToLower() == _answer.ToString().ToLower();
     }
+    public override void Display()
+    {
+        Console.Write("True or False: ");
+        base.Display();
+    }
 }
