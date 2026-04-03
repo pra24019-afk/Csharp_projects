@@ -7,4 +7,8 @@ public class TrueFalseQuestion: Question
     {
         _answer = answer;
     }
+    public override bool CheckAnswer(string userAnswer)
+    {
+        return userAnswer.ToLower() == _answer.ToString().ToLower();
+    }
 }
