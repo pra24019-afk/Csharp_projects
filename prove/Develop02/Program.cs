@@ -14,7 +14,7 @@ class Program
         while (running)
         {
             Console.WriteLine("Menu");
-            Console.WriteLine("1. Write New Entry");
+            Console.WriteLine("1. Write New Entry (10 without optional entry topic)");
             Console.WriteLine("2. Display Journal");
             Console.WriteLine("3. Save Journal");
             Console.WriteLine("4. Load Journal");
@@ -50,6 +50,18 @@ class Program
                 Console.WriteLine("Entry Added!");
                 Console.WriteLine();
 
+            }else if (_menuChoice == 10)
+            {
+                Console.WriteLine("New Entry:");
+                Console.WriteLine("What is the date? (MMDDYYYY)");
+                int _dateOfEntry = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Entry Details:");
+                string _entryDetails = Console.ReadLine();
+
+                Entry entry = new Entry(_dateOfEntry, _entryDetails, _name);
+                myJournal._entries.Add(entry);
+                
             }else if (_menuChoice == 2)
             {
                 myJournal.DisplayJournal();
